@@ -2807,6 +2807,17 @@ namespace SDL2
 			SDL_RendererFlip flip
 		);
 
+		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
+		public static extern int SDL_RenderCopyExF(
+			IntPtr renderer,
+			IntPtr texture,
+			ref SDL_Rect srcrect,
+			ref SDL_FRect dstrect,
+			double angle,
+			ref SDL_FPoint center,
+			SDL_RendererFlip flip
+		);
+
 		/* renderer refers to an SDL_Renderer*, texture to an SDL_Texture*.
 		 * Internally, this function contains logic to use default values when
 		 * source, destination, and/or center are passed as NULL.
